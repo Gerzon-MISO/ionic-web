@@ -2,56 +2,28 @@
 @import "../../../theme/breakpoints.scss";
 @import "../../../../node_modules/bootstrap/scss/mixins/";
 
-@include media-breakpoint-down(lg) {
-  .opciones-right {
-    display: flex;
-    width: 100%;
+@include media-breakpoint-up(lg) {
+  .header-table{
+    display: table-header-group !important;
+  }
 
-    button {
-      flex: 1;
+  thead {
+    height: 3em;
+    font-size: 1.1em;
+    th {
+      height: 3em;
+      vertical-align: middle;
+      padding-left: 0.5em;
+      font-weight: 400;
     }
   }
-  .buttonsActions {
-    display: flex;
-    width: 30%;
-    flex-direction: row;
-    justify-content: space-around;
-  }
 
-  thead {
-    display: table-header-group !important;
-  }
-  .song-header{
-    display: table-cell
+  .table-lg{
+    display: table-row !important;
   }
 }
-
-@include media-breakpoint-up(lg) {
-  thead {
-    display: table-header-group !important;
-  }
-  .buttonsActions {
-    width: 30%;
-  }
-}
-:host {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-
-.row-custom {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 0px;
-  margin-left: 0px;
-  width: 100%;
-}
-
-.content {
-  width: 100%;
-  padding: 20px;
-  min-height: 100vh;
+.minutes-mobile{
+  text-align: right;
 }
 
 .btn-circle {
@@ -90,25 +62,12 @@ input {
 .add-button-container {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
   .btn-circle {
     background-color: $paletteOrange;
     border-color: currentColor !important;
     color: $white !important;
-    height: 3em;
-    width: 3em;
-    margin-left: 1em;
-    margin-right: 1em;
-    i {
-      font-size: 1.5em;
-    }
   }
-}
-
-.left-options-container {
-  display: flex;
-  align-items: center;
-  margin-top: -0.5em;
-  justify-content: flex-end;
 }
 
 .table-striped > tbody > tr:nth-child(odd) > td,
@@ -146,26 +105,4 @@ thead {
     padding-left: 0.5em;
     font-weight: 400;
   }
-}
-
-.btn-circle {
-  background-color: $paletteOrange;
-  border-color: currentColor !important;
-  color: $white !important;
-  height: 3em;
-  width: 3em;
-  margin-left: 1em;
-  margin-right: 1em;
-  i {
-    font-size: 1.5em;
-  }
-}
-
-.back-button {
-  color: $white !important;
-  border: currentColor !important;
-  height: 3em;
-  width: 5em;
-  margin: 0;
-  box-shadow: $box-shados-feed-cards;
 }
